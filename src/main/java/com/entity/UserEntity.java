@@ -11,7 +11,7 @@ import javax.persistence.Table;
 public class UserEntity {
 	@Id
 	@GeneratedValue
-	int userId;
+	Integer userId;
 	String firstname;
 	String lastname;
 	@Column(name = "gender" , length = 20 , nullable = true , unique = false)
@@ -19,10 +19,11 @@ public class UserEntity {
 	String email;
 	String password;
 	Boolean active;
-	public int getUserId() {
+	
+	public Integer getUserId() {
 		return userId;
 	}
-	public void setUserId(int userId) {
+	public void setUserId(Integer userId) {
 		this.userId = userId;
 	}
 	public String getFirstname() {
