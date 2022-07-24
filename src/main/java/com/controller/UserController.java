@@ -3,7 +3,6 @@ package com.controller;
 import java.util.List;
 import java.util.Optional;
 
-import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +33,12 @@ public class UserController {
 		List<UserEntity> users = userRepo.findAll();
 		return users;
 	}
+	
+//	@GetMapping	
+//	public List<UserEntity> getAllUsersByStatus(@RequestParam("active") Boolean active){
+//		List<UserEntity> users = userRepo.getAllUsersByActiveStatus(active);
+//		return users;
+//	}
 	
 	@DeleteMapping
 	public boolean removeUser(@RequestParam("userid") int userid) {

@@ -10,4 +10,6 @@ import com.entity.UserEntity;
 @Repository
 public interface UserRepository extends CrudRepository<UserEntity, Integer> {
 	List<UserEntity> findAll();
+
+//	List<UserEntity> getAllUsersByActiveStatus(Boolean active);
 }
